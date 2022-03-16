@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 15:58:38 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/16 16:35:42 by tblaase          ###   ########.fr       */
+/*   Created: 2022/03/16 15:33:08 by tblaase           #+#    #+#             */
+/*   Updated: 2022/03/16 16:52:20 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+// Header-protection
+#pragma once
 
-int	main(void)
+// includes
+#include <string>
+#include <iostream>
+
+// classes
+class Zombie
 {
-	Zombie *zombie = newZombie("Buckethead Zombie");
-	randomChump("Basic Zombie");
-	delete zombie;
-	return (EXIT_SUCCESS);
-}
+	private:
+		std::string	_name;
+	public:
+	// Constructors
+		Zombie(std::string s);
+	// Deconstructors
+		~Zombie();
+	// Public Methods
+		void	announce(void)const;
+
+};
+
+Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
