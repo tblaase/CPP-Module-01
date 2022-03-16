@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 17:16:08 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/16 17:29:13 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/16 18:30:28 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ int	main()
 		horde[i].announce();
 	delete[] horde;
 	horde = zombieHorde(0, "Failed");
-	// system("leaks zombieHorde");
 	return (EXIT_SUCCESS);
 }
