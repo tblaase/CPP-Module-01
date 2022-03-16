@@ -6,11 +6,11 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/16 15:08:31 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/16 17:14:00 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
+NAME		=	zombieHorde
 
 CC			=	c++
 
@@ -31,7 +31,7 @@ UP			=	\033[A
 CUT			=	\033[K
 
 #source files
-SRC_FILES	=
+SRC_FILES	=	main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 

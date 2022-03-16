@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 17:16:08 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/16 17:29:13 by tblaase          ###   ########.fr       */
+/*   Created: 2022/03/16 15:33:08 by tblaase           #+#    #+#             */
+/*   Updated: 2022/03/16 17:30:51 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+// Header-protection
+#pragma once
 
-int	main()
+// includes
+#include <string>
+#include <iostream>
+
+// classes
+class Zombie
 {
-	Zombie	*horde;
-	int		zombieAmount = 10;
+	private:
+		std::string	_name;
+	public:
+	// Constructors
+		Zombie();
+	// Deconstructors
+		~Zombie();
+	// Public Methods
+		void	announce(void)const;
+		void	set_name(std::string name);
+};
 
-	horde = zombieHorde(zombieAmount, "Horde Member");
-	if (horde == NULL)
-		return (EXIT_FAILURE);
-	for (int i = 0; i < zombieAmount; ++i)
-		horde[i].announce();
-	delete[] horde;
-	horde = zombieHorde(0, "Failed");
-	// system("leaks zombieHorde");
-	return (EXIT_SUCCESS);
-}
+Zombie	*zombieHorde(int N, std::string name);

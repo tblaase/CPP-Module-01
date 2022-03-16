@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 17:16:08 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/16 17:29:13 by tblaase          ###   ########.fr       */
+/*   Created: 2022/03/16 15:40:15 by tblaase           #+#    #+#             */
+/*   Updated: 2022/03/16 17:21:52 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main()
+// Constructor
+Zombie::Zombie()
 {
-	Zombie	*horde;
-	int		zombieAmount = 10;
+}
 
-	horde = zombieHorde(zombieAmount, "Horde Member");
-	if (horde == NULL)
-		return (EXIT_FAILURE);
-	for (int i = 0; i < zombieAmount; ++i)
-		horde[i].announce();
-	delete[] horde;
-	horde = zombieHorde(0, "Failed");
-	// system("leaks zombieHorde");
-	return (EXIT_SUCCESS);
+// Deconstructor
+Zombie::~Zombie()
+{
+	std::cout << _name << " stepped on a Potato Mine and died.\n"  << std::endl;
+}
+
+// Public Methods
+
+void	Zombie::announce(void) const
+{
+	std::cout << _name << ": BraiiiiiiinnnzzzZ...\n" << std::endl;
+}
+
+void	Zombie::set_name(std::string name)
+{
+	this->_name = name;
 }

@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 17:16:08 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/16 17:29:13 by tblaase          ###   ########.fr       */
+/*   Created: 2022/03/16 17:03:03 by tblaase           #+#    #+#             */
+/*   Updated: 2022/03/16 17:30:14 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int	main()
+Zombie	*zombieHorde(int N, std::string name)
 {
-	Zombie	*horde;
-	int		zombieAmount = 10;
-
-	horde = zombieHorde(zombieAmount, "Horde Member");
+	if (N < 1)
+	{
+		std::cout << "A Horde can not contain less than 1 Zombie." << std::endl;
+		return (NULL);
+	}
+	Zombie *horde = new Zombie[N];
 	if (horde == NULL)
-		return (EXIT_FAILURE);
-	for (int i = 0; i < zombieAmount; ++i)
-		horde[i].announce();
-	delete[] horde;
-	horde = zombieHorde(0, "Failed");
-	// system("leaks zombieHorde");
-	return (EXIT_SUCCESS);
+	{
+		std::cout << "Allocation of the horde failed." << std::endl;
+		return (NULL);
+	}
+	for (int i = 0; i <= N; i++)
+		horde[i].set_name(name);
+	return (horde);
 }
