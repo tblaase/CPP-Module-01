@@ -6,11 +6,11 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/16 15:09:27 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/17 10:15:11 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
+NAME		=	brain
 
 CC			=	c++
 
@@ -31,7 +31,7 @@ UP			=	\033[A
 CUT			=	\033[K
 
 #source files
-SRC_FILES	=
+SRC_FILES	=	main.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
