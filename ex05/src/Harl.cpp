@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:00:25 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/18 18:16:39 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/18 18:23:48 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ Harl::Harl()
 // Deconstructors
 Harl::~Harl()
 {
-	std::cout << "deconst harl";
 }
 
 // Private Methods
