@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 15:00:25 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/18 18:05:47 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/18 18:12:11 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,13 @@ void	Harl::error(void)
 // Public Methods
 void	Harl::complain(std::string level)
 {
-	void    (Harl::*pt2PrivateMemberFunc[])( void ) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	void    (Harl::*functionPTRS[])( void ) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string complains[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	for (int i = 0; i < 4; i++)
 	{
 		if (complains[i] == level)
-			(this->*pt2PrivateMemberFunc[i])();
+			(this->*functionPTRS[i])();
 	}
 }
 // Getter
