@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 17:48:01 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/18 18:08:00 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/18 18:15:00 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	Harl	harl;
 
-	std::cout << "Printing all harl could say." << std::endl;
+	std::cout << "Printing all harl could say." << std::endl << std::endl;
 	harl.complain("ERROR");
 	std::cout << std::endl;
 	harl.complain("WARNING");
