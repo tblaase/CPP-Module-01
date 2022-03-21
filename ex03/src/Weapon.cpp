@@ -6,42 +6,34 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 10:30:41 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/17 10:53:38 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 16:29:57 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
 
-// Constructors
+// // Constructor
 
-Weapon::Weapon()
+Weapon::Weapon(const std::string &weapon)
 {
-	this->_type = "default club";
+	this->setType(weapon);
 }
 
-Weapon::Weapon(std::string new_type)
-{
-	this->_type = new_type;
-}
-
-// Deconstructor
+// // Deconstructor
 Weapon::~Weapon()
 {
-	std::cout << "Weapon Deconstructor called" << std::endl;
+	std::cout << this->getType() << " dropped to the floor and broke." << std::endl;
 }
 
-// Public Methods
-
 // Getter
-const std::string	&Weapon::getType(void)const
+std::string Weapon::getType() const
 {
-	const std::string	&typeREF = this->_type;
-	return (typeREF);
+	return (_type);
 }
 
 // Setter
-void	Weapon::setType(std::string new_type)
+void Weapon::setType(const std::string &weapon)
 {
-	this->_type = new_type;
+	_type = weapon;
 }

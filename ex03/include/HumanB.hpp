@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 10:30:07 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/17 12:39:33 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 16:45:47 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,26 +19,21 @@
 #include "Weapon.hpp"
 
 // classes
-
 class HumanB
 {
 	private:
-		Weapon _weapon;
 		std::string _name;
+		Weapon *_weapon;
+		bool _is_armed;
 	public:
-	// Constructors
-		HumanB();
+	// Constructor
 		HumanB(std::string name);
-
-	// Deconstructors
-		~HumanB();
-
-	// Public Methods
-		void	attack(void)const;
+	// Deconstructor
+		~HumanB(void);
 	// Getter
-		const std::string	getWeapon(void)const;
-		const std::string	getName(void)const;
+
 	// Setter
-		void	setWeapon(Weapon weapon);
-		void	setName(std::string name);
+		void setWeapon(Weapon &weapon);
+	// Public Methods
+		void attack(void);
 };

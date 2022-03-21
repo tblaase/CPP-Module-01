@@ -6,60 +6,27 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 10:30:58 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/21 14:40:15 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 16:52:12 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-
-// Constructors
-HumanA::HumanA()
+// Constructor
+HumanA::HumanA(std::string name, Weapon &weapon):_weapon(weapon)
 {
-	Weapon default_club = Weapon();
-	this->setName("defaultA");
-	this->setWeapon(default_club);
-}
-
-HumanA::HumanA(std::string name, Weapon weapon)
-{
-	this->setName(name);
-	this->setWeapon(weapon);
+	this->_name = name;
+	std::cout << this->_name <<" joined the battlefield and grabbed a " << this->_weapon.getType() << " to fight." << std::endl;
 }
 
 // Deconstructor
-HumanA::~HumanA()
+HumanA::~HumanA(void)
 {
+    std::cout << this->_name << " died." << std::endl;
 }
 
 // Public Methods
-void	HumanA::attack(void)const
+void HumanA::attack(void)
 {
-	std::cout <<
-	this->getName() <<
-	" attacks with their " <<
-	this->getWeapon() <<
-	std::endl;
-}
-
-// Getters
-const std::string	HumanA::getName(void)const
-{
-	return (this->_name);
-}
-
-const std::string	HumanA::getWeapon(void)const
-{
-	return (this->_weapon.getType());
-}
-
-// Setters
-void	HumanA::setName(std::string name)
-{
-	this->_name = name;
-}
-
-void	HumanA::setWeapon(Weapon weapon)
-{
-	this->_weapon = weapon;
+    std::cout << this->_name << " attacks with his " << this->_weapon.getType() << "." << std::endl;
 }
