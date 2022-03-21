@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:21:25 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/19 13:20:31 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 14:50:48 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,13 @@ void	Harl::complain(std::string level)
 	{
 		case(0):
 			(this->*functionPTRS[0])();
-			__attribute__ ((fallthrough));// otherwise linux won't compile
+			// __attribute__ ((fallthrough));// otherwise linux won't compile
 		case(1):
 			(this->*functionPTRS[1])();
-			__attribute__ ((fallthrough));
+			// __attribute__ ((fallthrough));
 		case(2):
 			(this->*functionPTRS[2])();
-			__attribute__ ((fallthrough));
+			// __attribute__ ((fallthrough));
 		case(3):
 			(this->*functionPTRS[3])();
 			break;
