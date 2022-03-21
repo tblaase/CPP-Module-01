@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:56:06 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/21 14:46:38 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 14:58:43 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 std::string my_replace(std::string buffer, const std::string search, const std::string replace)
 {
 	size_t	erase_length = search.length();
+	size_t	replace_length = replace.length();
 	size_t	pos_search = 0;
 
 	pos_search = buffer.find(search);
@@ -26,7 +27,7 @@ std::string my_replace(std::string buffer, const std::string search, const std::
 	{
 		buffer.erase(pos_search, erase_length);
 		buffer.insert(pos_search, replace);
-		pos_search = buffer.find(search, pos_search + replace.length());
+		pos_search = buffer.find(search, pos_search + replace_length);
 	}
 	return (buffer);
 }
