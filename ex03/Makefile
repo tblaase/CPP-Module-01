@@ -6,11 +6,11 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/16 15:10:40 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/17 12:13:21 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
+NAME		=	unnecessary_violence
 
 CC			=	c++
 
@@ -31,7 +31,7 @@ UP			=	\033[A
 CUT			=	\033[K
 
 #source files
-SRC_FILES	=
+SRC_FILES	=	HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 

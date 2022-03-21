@@ -1,34 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/17 10:47:17 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/17 11:05:04 by tblaase          ###   ########.fr       */
+/*   Created: 2022/03/17 10:30:24 by tblaase           #+#    #+#             */
+/*   Updated: 2022/03/17 10:53:11 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
-#include "Weapon.hpp"
+// Header-protection
+#pragma once
 
-int main()
+// Includes
+#include <string>
+#include <iostream>
+
+// classes
+
+class Weapon
 {
-{
-Weapon club = Weapon("crude spiked club");
-HumanA bob("Bob", club);
-bob.attack();
-club.setType("some other type of club");
-bob.attack();
-}
-{
-Weapon club = Weapon("crude spiked club");
-HumanB jim("Jim");
-jim.setWeapon(club);
-jim.attack();
-club.setType("some other type of club");
-jim.attack();
-}
-return (EXIT_SUCCESS);
+	private:
+		std::string	_type;
+
+	public:
+	// Constructors
+		Weapon();
+		Weapon(std::string new_type);
+
+	// Deconstructors
+		~Weapon();
+
+	// Public Methods
+
+	// Getter
+		const std::string	&getType(void)const;
+
+	// Setter
+		void	setType(std::string new_type);
+};
