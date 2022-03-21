@@ -6,7 +6,7 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/18 14:33:32 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/21 14:47:55 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		=	replace
 
 CC			=	c++
 
-CFLAGS		=	-Wall -Werror -Wextra -std=c++98 -g
+CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
 # directories
 SRC_DIR		=	src/

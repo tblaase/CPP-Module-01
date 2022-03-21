@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:56:06 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/18 14:53:24 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 14:46:38 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,7 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		std::string const filename = argv[1];
-		// filename.append(".replaced");
+		const std::string filename = argv[1];
 		const std::string	search = argv[2];
 		const std::string	replace = argv[3];
 		std::string			buffer;
@@ -51,7 +50,7 @@ int main(int argc, char **argv)
 		infile.open(argv[1]);
 		if (infile.is_open() == true)
 		{
-			outfile.open(/*filename + */".replace", std::ios::out | std::ios::trunc );
+			outfile.open(filename + ".replace", std::ios::out | std::ios::trunc ); //only works on macOS with the +
 			if (outfile.is_open() == true)
 			{
 				while (std::getline(infile, buffer))
