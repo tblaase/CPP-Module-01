@@ -1,23 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 18:41:57 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/18 18:49:11 by tblaase          ###   ########.fr       */
+/*   Created: 2022/03/18 15:00:04 by tblaase           #+#    #+#             */
+/*   Updated: 2022/03/18 17:52:29 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+// Header-protection
+#pragma once
 
-int main(int argc, char **argv)
+// Includes
+#include <string>
+#include <iostream>
+#include <cstdlib>
+
+// classes
+
+class Harl
 {
-	Harl harl;
-	if (argc == 2)
-		harl.complain(argv[1]);
-	else
-		harl.complain("irrelevant string");
-	return (EXIT_SUCCESS);
-}
+	private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+
+	public:
+	// Constructors
+		Harl();
+
+	// Deconstructors
+		~Harl();
+
+	// Public Methods
+		void	complain(std::string level);
+	// Getter
+
+	// Setter
+
+};

@@ -6,22 +6,22 @@
 #    By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 14:46:31 by tblaase           #+#    #+#              #
-#    Updated: 2022/03/16 15:13:08 by tblaase          ###   ########.fr        #
+#    Updated: 2022/03/18 18:55:59 by tblaase          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=
+NAME		=	harlFilter
 
 CC			=	c++
 
 CFLAGS		=	-Wall -Werror -Wextra -std=c++98
 
-# directories
+#directories
 SRC_DIR		=	src/
 OBJ_DIR		=	obj/
 INC_DIR		=	include/
 
-# controll codes
+#controll codes
 RESET		=	\033[0m
 GREEN		=	\033[32m
 YELLOW		=	\033[33m
@@ -31,7 +31,7 @@ UP			=	\033[A
 CUT			=	\033[K
 
 #source files
-SRC_FILES	=
+SRC_FILES	=	Harl.cpp main.cpp
 
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
