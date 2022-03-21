@@ -6,7 +6,7 @@
 /*   By: tblaase <tblaase@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 09:56:06 by tblaase           #+#    #+#             */
-/*   Updated: 2022/03/21 14:58:43 by tblaase          ###   ########.fr       */
+/*   Updated: 2022/03/21 15:01:41 by tblaase          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 		infile.open(argv[1]);
 		if (infile.is_open() == true)
 		{
-			outfile.open(filename + ".replace", std::ios::out | std::ios::trunc ); //only works on macOS with the +
+			outfile.open(filename + ".replace", std::ios::out | std::ios::trunc ); //only works on macOS with the +, to make it work on Linux, comment out "filename +"
 			if (outfile.is_open() == true)
 			{
 				while (std::getline(infile, buffer))
