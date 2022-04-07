@@ -18,7 +18,7 @@ My solution for CPP Module 01 of the Common core of 42 school.
 
 ## About this Module
 
-The Scope of this Modul was to get to know C++ further and come in contact with:
+The Scope of this Module was to get to know C++ further and come in contact with:
 - Allocation (ex00 + ex01)
 - Pointer/Reference (ex03)
 - getter and setter functions (ex04)
